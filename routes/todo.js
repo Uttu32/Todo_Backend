@@ -14,6 +14,6 @@ router.patch("/update-todo/:todoId", isAuthenticated, updateTodo);
 router.delete("/delete-todo/:todoId", isAuthenticated, deleteTodo);
 
 router.get("/all-user-todo", isAuthenticated, getAllUserTodo);
-router.get("/all-todo", getAllTodo);
+router.get("/all-todo",isAuthenticated, getAllTodo);
 
 module.exports = router;
